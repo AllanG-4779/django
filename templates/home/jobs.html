@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Search Jobs{% endblock title %}
+{% block content %}
+    <div id="job-container">
+    {% for posts in ctx %}
+        <div class="job-card">
+         <h4 id="job-title">{{ posts.title }} ({{ posts.posts }}) positions</h4>
+         <div>
+        <p id="loc-mode"> {{ posts.Location }}  |  {{ posts.mode }}</p>
+        <p>{{ posts.sector }} related</p>
+        <p>{{ posts.organization }}</p>
+         </div>
+         <div id="posted-on"><p>21 days left</p><p>1st Jan 2021</p> </div>
+
+
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

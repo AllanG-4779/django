@@ -1,0 +1,125 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+body{
+    background: whitesmoke;
+}
+nav{
+    background: white;
+    height:3vw;
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+
+}
+nav div{
+flex-grow: 2;
+    margin-left: 5px;
+    font-size: 24px;
+}
+nav ul{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+nav ul li a{
+    color:dodgerblue;
+    text-decoration: none;
+
+}
+nav ul li a:hover{
+    text-decoration: overline;
+}
+.desc{
+    font-size: 35px;
+    width:100%;
+    font-weight: bolder;
+    color: #3c3939;
+    line-height: 50px;
+
+}
+#contact{
+    background-color: dodgerblue;
+    padding:3px;
+    border:1px solid #d3d3d3;
+
+}
+#contact a{
+    color: white;
+
+
+}
+#contact a:hover{
+    text-decoration: none;
+}
+
+#welcome{
+    margin-top: 150px;
+    margin-left:50px;
+    display: flex;
+    width:80%;
+    justify-content: space-evenly;
+}
+#welcome div{
+    width: 60%;
+}
+#get_started_btn{
+    width:200px;
+    border:none;
+    padding:10px;
+    background-color: dodgerblue;
+    color: white;
+    margin-top:50px;
+    font-weight: bold;
+    margin-left: 100px;
+
+}
+#get_started_btn:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+img{
+    object-fit: contain;
+
+}
+.job-card{
+    box-sizing: border-box;
+    background-color: white;
+    flex-basis:380px;
+    margin:10px;
+    padding:10px 20px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    cursor:pointer
+}
+#job-title{
+    color: dodgerblue;
+}
+#loc-mode{
+    color: #887f7f;
+}
+#posted-on{
+    /*align-self: flex-end;*/
+    /*font-size: 12px;*/
+    /*color: lightgrey;*/
+    display:flex;
+    justify-content: space-between;
+    color: lightgrey;
+    font-size:14px;
+}
+#job-container{
+
+    margin:10px auto;
+    display: flex;
+    flex-wrap:wrap;
+    width:60%;
+}

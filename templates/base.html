@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <nav>
+   <div><p>AO</p></div>
+      {% block navigation %}
+          {% include "partials/navigation.html" %}
+      {% endblock %}
+  </nav>
+   {% block content %}
+
+   {% endblock content %}
+
+
+</body>
+</html>
