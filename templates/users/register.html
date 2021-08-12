@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Register here
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+      <form method="post">
+          {% csrf_token %}
+           {{ form.as_p }}
+      </form>
+
+    </div>
+{% endblock content %}

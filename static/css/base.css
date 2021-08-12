@@ -113,7 +113,7 @@ img{
     /*color: lightgrey;*/
     display:flex;
     justify-content: space-between;
-    color: lightgrey;
+    color: #676464;
     font-size:14px;
 }
 #job-container{

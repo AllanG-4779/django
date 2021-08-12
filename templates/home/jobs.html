@@ -4,14 +4,22 @@
     <div id="job-container">
     {% for posts in ctx %}
         <div class="job-card">
-         <h4 id="job-title">{{ posts.title }} ({{ posts.posts }}) positions</h4>
+         <h4 id="job-title">{{ posts.occupation }} ({{ posts.posts }}) positions</h4>
          <div>
         <p id="loc-mode"> {{ posts.Location }}  |  {{ posts.mode }}</p>
         <p>{{ posts.sector }} related</p>
         <p>{{ posts.organization }}</p>
          </div>
-         <div id="posted-on"><p>21 days left</p><p>1st Jan 2021</p> </div>
+            {% if posts.days_left < 1 %}
 
+         <div id="posted-on"><p> {{ "Deadline Passed" }}</p><p>{{ posts.posted_on }}</p> </div>
+                {% else %}
+                {% if posts.days_left == 1%}
+                <div id="posted-on"><p> {{ posts.days_left }} day left</p><p>{{ posts.posted_on }}</p> </div>
+                    {% else %}
+                    <div id="posted-on"><p> {{ posts.days_left }} days left</p><p>{{ posts.posted_on }}</p> </div>
+                    {% endif %}
+            {% endif %}
 
         </div>
     {% endfor %}
