@@ -5,10 +5,18 @@
 {% endblock %}
 
 {% block content %}
-    <div class="content">
+    <div class="content-section ">
       <form method="post">
           {% csrf_token %}
-           {{ form.as_p }}
+
+          <fieldset class="form-group">
+              <legend>
+                  Join Us
+              </legend>
+                {{ form.as_p }}
+          </fieldset>
+
+      <div class="form-group"><input class="btn btn-outline-primary btn-block" type="submit"/></div>
       </form>
 
     </div>

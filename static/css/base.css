@@ -2,124 +2,226 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
-    font-family: "Montserrat", serif;
+    font-family: "Montserrat", serif !important;
+
 }
 body{
-    background: whitesmoke;
+    background: whitesmoke !important;
 }
-nav{
-    background: white;
-    height:3vw;
+/*nav{*/
+/*    background: white;*/
+/*    height:3vw;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+
+/*}*/
+/*nav div{*/
+/*flex-grow: 2;*/
+/*    margin-left: 5px;*/
+/*    font-size: 24px;*/
+/*}*/
+/*nav ul{*/
+/*    flex-grow: 1;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    list-style: none;*/
+/*    justify-content: space-evenly;*/
+/*    align-items: center;*/
+
+/*}*/
+
+/*nav ul li a{*/
+/*    color:dodgerblue;*/
+/*    text-decoration: none;*/
+
+/*}*/
+/*nav ul li a:hover{*/
+/*    text-decoration: overline;*/
+/*}*/
+/*.desc{*/
+/*    font-size: 35px;*/
+/*    width:100%;*/
+/*    font-weight: bolder;*/
+/*    color: #3c3939;*/
+/*    line-height: 50px;*/
+
+/*}*/
+/*#contact{*/
+/*    background-color: dodgerblue;*/
+/*    padding:3px;*/
+/*    border:1px solid #d3d3d3;*/
+
+/*}*/
+/*#contact a{*/
+/*    color: white;*/
+
+
+/*}*/
+/*#contact a:hover{*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*#welcome{*/
+/*    margin-top: 150px;*/
+/*    margin-left:50px;*/
+/*    display: flex;*/
+/*    width:80%;*/
+/*    justify-content: space-evenly;*/
+/*}*/
+/*#welcome div{*/
+/*    width: 60%;*/
+/*}*/
+/*#get_started_btn{*/
+/*    width:200px;*/
+/*    border:none;*/
+/*    padding:10px;*/
+/*    background-color: dodgerblue;*/
+/*    color: white;*/
+/*    margin-top:50px;*/
+/*    font-weight: bold;*/
+/*    margin-left: 100px;*/
+
+/*}*/
+/*#get_started_btn:hover{*/
+/*    cursor: pointer;*/
+/*    opacity: .7;*/
+/*}*/
+/*img{*/
+/*    object-fit: contain;*/
+
+/*}*/
+/*.job-card{*/
+/*    box-sizing: border-box;*/
+/*    background-color: white;*/
+/*    flex-basis:380px;*/
+/*    margin:10px;*/
+/*    padding:10px 20px;*/
+/*    line-height: 30px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    cursor:pointer*/
+/*}*/
+/*#job-title{*/
+/*    color: dodgerblue;*/
+/*}*/
+/*#loc-mode{*/
+/*    color: #887f7f;*/
+/*}*/
+/*#posted-on{*/
+/*    !*align-self: flex-end;*!*/
+/*    !*font-size: 12px;*!*/
+/*    !*color: lightgrey;*!*/
+/*    display:flex;*/
+/*    justify-content: space-between;*/
+/*    color: #676464;*/
+/*    font-size:14px;*/
+/*}*/
+/*#job-container{*/
+
+/*    margin:10px auto;*/
+/*    display: flex;*/
+/*    flex-wrap:wrap;*/
+/*    width:60%;*/
+/*}*/
+/*!*.content-form{*!*/
+/*!*    background-color: white;*!*/
+/*!*    display: flex;*!*/
+/*!*    width:300px;*!*/
+/*!*    margin:30px auto;*!*/
+/*!*    padding:6px;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-items: center;*!*/
+/*!*    min-height: 350px;*!*/
+/*!*}*!*/
+
+
+/*!*.content-form input{*!*/
+/*!*    padding:5px;*!*/
+/*!*    font-size: 16px;*!*/
+
+/*!*}*!*/
+/*!*.content-form  li{*!*/
+/*!*    list-style: none;*!*/
+/*!*    display: flex;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*    height:70px;*!*/
+/*!*}*!*/
+/*.content-form input[type='submit']{*/
+/*    background-color: dodgerblue;*/
+/*    width:200px;*/
+/*    color:white;*/
+/*    border:none;*/
+/*    padding:10px;*/
+/*    align-self: center;*/
+/*}*/
+/*.content-form h3{*/
+
+/*    color:dodgerblue;*/
+/*    margin :0 auto 20px auto;*/
+
+/*}*/
+/*.content-form input[type='submit']:hover{*/
+/*    opacity:.8;*/
+/*    cursor:pointer;*/
+
+/*}*/
+/*.alert-success{*/
+/*    background-color:#d4edda;*/
+/*    color: green;*/
+/*}*/
+/*.alert-error{*/
+/*        background-color: #f8d7da;*/
+/*    color:darkred;*/
+/*}*/
+/*.alert-debug{*/
+
+/*}*/
+/*.visible{*/
+/*    display: none;*/
+/*}*/
+/*.alert{*/
+/*    width:50%;*/
+/*    padding:10px;*/
+/*    font-size: large;*/
+/*    margin:10px auto;*/
+
+/*}*/
+/*.form-group p{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.alert p{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
+/*.alert p span{*/
+/*    font-weight: bolder;*/
+/*    cursor:pointer*/
+/*}*/
+.bg-success{
+    background-color: white !important;
+
+}
+.navbar-dark{
+    color:black !important;
+}
+.navbar-right{
     display: flex;
-   justify-content: space-between;
-    align-items: center;
+    color-adjust: economy; !important;
+    flex-direction: row-reverse;
 
 }
-nav div{
-flex-grow: 2;
-    margin-left: 5px;
-    font-size: 24px;
+.nav-link{
+    color:dodgerblue !important;
 }
-nav ul{
-    flex-grow: 1;
-    height: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: center;
-
+.navbar{
+    height: 45px;
 }
 
-nav ul li a{
-    color:dodgerblue;
-    text-decoration: none;
-
-}
-nav ul li a:hover{
-    text-decoration: overline;
-}
-.desc{
-    font-size: 35px;
-    width:100%;
-    font-weight: bolder;
-    color: #3c3939;
-    line-height: 50px;
-
-}
-#contact{
-    background-color: dodgerblue;
-    padding:3px;
-    border:1px solid #d3d3d3;
-
-}
-#contact a{
-    color: white;
-
-
-}
-#contact a:hover{
-    text-decoration: none;
-}
-
-#welcome{
-    margin-top: 150px;
-    margin-left:50px;
-    display: flex;
-    width:80%;
-    justify-content: space-evenly;
-}
-#welcome div{
-    width: 60%;
-}
-#get_started_btn{
-    width:200px;
-    border:none;
-    padding:10px;
-    background-color: dodgerblue;
-    color: white;
-    margin-top:50px;
-    font-weight: bold;
-    margin-left: 100px;
-
-}
-#get_started_btn:hover{
-    cursor: pointer;
-    opacity: .7;
-}
-img{
-    object-fit: contain;
-
-}
-.job-card{
-    box-sizing: border-box;
+.content-section{
     background-color: white;
-    flex-basis:380px;
-    margin:10px;
-    padding:10px 20px;
-    line-height: 30px;
-    display: flex;
-    flex-direction: column;
-    cursor:pointer
-}
-#job-title{
-    color: dodgerblue;
-}
-#loc-mode{
-    color: #887f7f;
-}
-#posted-on{
-    /*align-self: flex-end;*/
-    /*font-size: 12px;*/
-    /*color: lightgrey;*/
-    display:flex;
-    justify-content: space-between;
-    color: #676464;
-    font-size:14px;
-}
-#job-container{
-
-    margin:10px auto;
-    display: flex;
-    flex-wrap:wrap;
-    width:60%;
+    width:500px;
+    margin: 10px auto;
+    padding: 20px;
 }
