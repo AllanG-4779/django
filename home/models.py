@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import datetime
-
+from datetime import date
+from django.urls import  reverse
 
 # Create your models here.
 class Job(models.Model):
@@ -17,8 +17,10 @@ class Job(models.Model):
     deadline = models.DateField(verbose_name="Deadline")
 
     #  Adding a computed property
+
     def days_between(self):
-        days =str(self.deadline - self.posted_on).split(" ")[0]
+        todate = date.today()
+        days =str(self.deadline - todate).split(" ")[0]
         return int(days)
 
     days_left = property(days_between)
@@ -26,3 +28,6 @@ class Job(models.Model):
     
     def __str__(self):
         return f'{self.occupation} {self.days_left} day(s) left'
+    def get_absolute_url(self):
+        return reverse('jobdesc', kwargs={"pk":self.pk})
+

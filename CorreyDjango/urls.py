@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+# to configure image files
+from django.conf.urls.static import static
+from django.conf import  settings
 
+from django.contrib.auth import views as _
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("home.urls")),
-    path("users/", include("user.urls"))
-]
+    path("users/", include("user.urls")),
+    path("logout/", _.LogoutView.as_view(template_name="users/logout.html"), name="logout"),
+    path("login/", _.LoginView.as_view(redirect_authenticated_user=True, template_name = "users/login.html"), name="login")
+] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

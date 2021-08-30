@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}View profile{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="mt-4  bg-white " id= "profile">
+     <img class="profile-img" src="{{ user.profile.profile_image.url }}" />
+ <div id="userid">
+
+      {% if user.first_name != "" %}
+      <p>Full Names: <span class="text-success stress">{{ user.profile.props }}</span></p>
+       {% endif %}
+      <p>Email Address: <span class="text-success stress">{{ user.email }}</span></p>
+
+
+</div>
+ <button id="update_profile_btn" class="btn btn-sm btn-outline-secondary">Update Profile</button>
+  </div>
+    <div id="update_form" style="display: none">
+      <form enctype="multipart/form-data" method="post">
+          {% csrf_token %}
+       {{ user_update|crispy }}
+       {{ profile|crispy }}
+          <input type="submit" style="margin-top:10px;" class="btn-primary btn btn-sm">
+   </form>
+
+    </div>
+{% endblock content %}
+{% block js_files %}
+    <script src="{% static "js/profile.js " %}"></script>
+{% endblock js_files %}

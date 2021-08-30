@@ -199,29 +199,63 @@ body{
 /*    font-weight: bolder;*/
 /*    cursor:pointer*/
 /*}*/
-.bg-success{
-    background-color: white !important;
+
+
+
+/*.content-section{*/
+/*    background-color: white;*/
+/*    width:500px;*/
+/*    margin: 10px auto;*/
+/*    padding: 20px;*/
+/*}*/
+.profile-img{
+    border-radius:50%;
+    width:70px;
+    height: 70px;
+    object-fit: cover;
+    background-color: pink;
+
 
 }
-.navbar-dark{
-    color:black !important;
-}
-.navbar-right{
+#profile{
+    padding:20px;
+    max-width:60%;
     display: flex;
-    color-adjust: economy; !important;
-    flex-direction: row-reverse;
+    flex-direction: row;
+     align-items: center;
+    position:relative;
+
 
 }
-.nav-link{
-    color:dodgerblue !important;
+#userid{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
 }
-.navbar{
-    height: 45px;
+.stress{
+    margin-left:20px;
+    font-weight: bolder;
+    font-size:20px;
 }
-
-.content-section{
-    background-color: white;
-    width:500px;
-    margin: 10px auto;
-    padding: 20px;
+#update_profile_btn{
+    position: absolute;
+    bottom:3px;
+    left:78%;
+}
+#update_form{
+    margin-top:20px;
+}
+.title{
+    font-size:23px;
+    font-weight: normal;
+}
+#occupation{
+    text-decoration: none;
+    color: black;;
+}
+#occupation:hover{
+    color:dodgerblue;
+}
+form{
+    width:100%;
 }

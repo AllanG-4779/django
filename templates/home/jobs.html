@@ -1,27 +1,42 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Search Jobs{% endblock title %}
+
 {% block content %}
     <div id="job-container">
-    {% for posts in ctx %}
-        <div class="job-card">
-         <h4 id="job-title">{{ posts.occupation }} ({{ posts.posts }}) positions</h4>
-         <div>
-        <p id="loc-mode"> {{ posts.Location }}  |  {{ posts.mode }}</p>
-        <p>{{ posts.sector }} related</p>
-        <p>{{ posts.organization }}</p>
-         </div>
-            {% if posts.days_left < 1 %}
+      <div class="row ">
+            {% for post in ctx %}
+          <div class="col-sm-12 col-md-6  col-lg-6 col-lg-offset-1 " style="margin: 10px 0;">
 
-         <div id="posted-on"><p> {{ "Deadline Passed" }}</p><p>{{ posts.posted_on }}</p> </div>
-                {% else %}
-                {% if posts.days_left == 1%}
-                <div id="posted-on"><p> {{ posts.days_left }} day left</p><p>{{ posts.posted_on }}</p> </div>
-                    {% else %}
-                    <div id="posted-on"><p> {{ posts.days_left }} days left</p><p>{{ posts.posted_on }}</p> </div>
-                    {% endif %}
-            {% endif %}
+               <div class="card d-flex flex-row align-items-center p-2  ">
+                    <div>
+                        <img  style="margin-right: 10px; align-self: center; object-fit:contain; width:75px; height: 75px; border: 1px solid #d3d3d3;" class="img-rounded" src="{{   post.poster.profile.profile_image.url  }}" alt="Company">
+                    </div>
+                   <div class="job-desc d-flex flex-wrap flex-column ml-3">
+                       <a style="margin-left: 13px;" id="occupation" href="{% url 'jobdesc' post.id %}" class="title">{{ post.occupation }}</a>
 
-        </div>
-    {% endfor %}
+                       <div class="d-flex flex-column justify-content-between flex-wrap p-3">
+                           <div class="d-flex flex-row flex-wrap">
+                           <p style="min-width: 120px; margin-right: 10px;">Pro:{{ post.poster }}</p>
+                           <p  style="min-width:120px; margin-right: 10px;">Loc: {{ post.Location }}</p>
+                           </div>
+                           <div class="d-flex flex-row flex-wrap">
+                           <p  style="min-width:120px; margin-right: 10px;">Mod: {{ post.mode }}</p>
+                           <p style="min-width:120px; margin-right: 10px;" >Dead: {{ post.deadline }}</p>
+                           </div>
+                       </div>
+                       <div>
+                           {% if post.days_left > 0 %}
+                               <span class="badge alert-success">Active</span>
+                               {% else %}
+                               <span class="badge alert-danger">Expired on {{ post.deadline }}</span>
+                           {% endif %}
+                       </div>
+                   </div>
+               </div>
+
+          </div>
+            {% endfor %}
+      </div>
     </div>
 {% endblock content %}

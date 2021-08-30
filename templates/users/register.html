@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 {% block title %}
     Register here
 {% endblock %}
@@ -13,10 +13,13 @@
               <legend>
                   Join Us
               </legend>
-                {{ form.as_p }}
+                {{ form|crispy }}
           </fieldset>
 
       <div class="form-group"><input class="btn btn-outline-primary btn-block" type="submit"/></div>
+          <div class="mt-3">
+              <p>Already Have an account? <a class="text-decoration-none" href="{% url 'login' %}">Login here</a></p>
+          </div>
       </form>
 
     </div>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+   <div>
+      <p class="display-1">{{ object.poster }}</p>
+       <p class="display-5">About Our Organization</p>
+       <p>We are an organization that is situated at {{ object.Location }} and is in
+           lucrative business that ensures at giveing you all therequreiments as you work with us</p>
+       <p class="display-4">Requirements</p>
+        <ol>
+            <li>Be a holder of Masters</li>
+            <li>Have 10+ years of expereisnce</li>
+        </ol>
+   <p>Applications are received not later than {{ object.deadline }}</p>
+   <p class="display-6">Responsibilities</p>
+   <p>{{ object.description }}</p>
+       <a href="{% url 'edit-job' object.id %}" class="badge alert-warning">Edit</a>
+      <a href="{% url 'del-job' object.id %}" class="badge alert-danger">Delete</a>
+   </div>
+{% endblock %}

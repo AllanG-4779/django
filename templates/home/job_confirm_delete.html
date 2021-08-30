@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <p class="alert alert-danger">Are you sure you want delete the current Job?</p>
+            <button  class="btn btn-danger" type="submit">Yes, Delete</button>
+            <a class="btn btn-outline-info" href="{% url 'jobdesc' object.id%}">No, Go back</a>
+        </form>
+    </div>
+{% endblock %}
